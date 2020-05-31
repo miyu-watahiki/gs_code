@@ -1,22 +1,15 @@
 <?php
-function h($value){
-    return htmlspecialchars($value,ENT_QUOTES);
-}
-
-
 $flg = 0;
- $name = $_POST["name"];
- $mail = $_POST["mail"];
-
-// $s = post("$name","$mail"); 
-// echo $s;
-
-//File書き込み
-$file = fopen("./data/data.txt","a");	// ファイル読み込み
-fwrite($file, $name.",".$mail."\r\n");
-fclose($file);
-
-
+$name = $_POST["name"];
+$mail = $_POST["mail"];
+if($name==""){
+    $name = "未入力です";
+    $flg = 1;
+}
+if($mail==""){
+    $mail = "未入力です";
+    $flg = 1;
+}
 ?>
 <html>
 <head>
@@ -24,8 +17,8 @@ fclose($file);
 <title>POST（受信）</title>
 </head>
 <body>
-お名前：<?php echo h($name); ?>
-EMAIL：<?php echo h($mail); ?>
+お名前：<?php echo $name; ?>
+EMAIL：<?php echo $mail; ?>
 <?php
     if($flg == 0){
     ?>
