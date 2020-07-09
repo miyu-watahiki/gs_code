@@ -62,13 +62,13 @@ if($status==false) {
      <label>Login ID：<input type="text" name="lid" size="20" value="<?=$res["lid"]?>"> </label><br>
      <label>Login PW：<input type="text" name="lpw" size="20" value="<?=$res["lpw"]?>"> </label><br>
      <label>管理FLG：
-      一般（学生）<input type="radio" name="kanri_flg" value="<?=$res["kanri_flg"]?>">　
-      管理者（先生）<input type="radio" name="kanri_flg" value="<?=$res["kanri_flg"]?>">
+      一般（学生）<input type="radio" name="kanri_flg" value="0"><?=$res["kanri_flg"]?>
+      管理者（先生）<input type="radio" name="kanri_flg" value="1"><?=$res["kanri_flg"]?>
     </label>
     <br>
      <label>在学FLG：
-      在学<input type="radio" name="life_flg" value="<?=$res["life_flg"]?>">
-      卒業<input type="radio" name="life_flg" value="<?=$res["life_flg"]?>">
+      在学<input type="radio" name="life_flg" value="0"><?=$res["life_flg"]?>
+      卒業<input type="radio" name="life_flg" value="1"><?=$res["life_flg"]?>
     </label>
     <br>
     <input type="hidden" name="id" value="<?=$id?>">

@@ -31,37 +31,11 @@ if($status==false) {
         $view .= $res["id"];
         $view .= '</a>';
         $view .= '</td>';
-
-        $view .= '<td>';
-        $view .= '<a href="users_detail.php?id='.$res["name"].'">';
-        $view .= $res["name"];
-        $view .= '</a>';
-        $view .= '</td>';
-
-        $view .= '<td>';
-        $view .= '<a href="users_detail.php?id='.$res["lid"].'">';
-        $view .= $res["lid"];
-        $view .= '</a>';
-        $view .= '</td>';
-
-        $view .= '<td>';
-        $view .= '<a href="users_detail.php?id='.$res["lpw"].'">';
-        $view .= $res["lpw"];
-        $view .= '</a>';
-        $view .= '</td>';
-
-        $view .= '<td>';
-        $view .= '<a href="users_detail.php?id='.$res["kanri_flg"].'">';
-        $view .= $res["kanri_flg"];
-        $view .= '</a>';
-        $view .='</td>';
-        
-        $view .= '<td>';
-        $view .= '<a href="users_detail.php?id='.$res["life_flg"].'">';
-        $view .=$res["life_flg"];
-        $view .= '</a>';
-        $view .= '</td>';
-        
+        $view .= '<td>'.$res["name"].'</td>';
+        $view .= '<td>'.$res["lid"].'</td>';
+        $view .= '<td>'.$res["lpw"].'</td>';
+        $view .= '<td>'.$res["kanri_flg"].'</td>';
+        $view .= '<td>'.$res["life_flg"].'</td>';
         $view .= '</tr>'.PHP_EOL;  //PHP_EOLは改行コード!!
     }
 }
